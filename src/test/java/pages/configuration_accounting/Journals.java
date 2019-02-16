@@ -14,4 +14,13 @@ public class Journals {
     @FindBy(xpath = "(//li[@class='active'])[3]")
     public WebElement pageName;
 
+    @FindBy(xpath = "//span[@class='oe_menu_text'][contains(text(),'Accounting') ]")
+    public WebElement accountingLink;
+
+    @FindBy(xpath = "(//span[@class='oe_menu_text'][contains(text(),'Journals')])[2]")
+    public WebElement journalsLink;
+
+    @FindBy(xpath = "//li[@class='active'][.='New']")
+    public WebElement creationNewPageText;
+
 }
