@@ -8,19 +8,17 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
         plugin = {
-//                "pretty",
-//                "html:target/default-cucumber-reports",
-//                "json:target/cucumber.json",
-//                "junit:target/cucumber.xml"
+                "pretty",
+                "html:target/default-cucumber-reports",
+                "json:target/cucumber.json",
+                "junit:target/cucumber.xml"
         },
         tags = {
-//                {"@purchases", "@manager"},
-               "@todoo"
-//                "@to-do"
+               "@Regression"
         },
         features = {"src/test/resources/features"},
         glue = {"step_definitions"}
-        , dryRun = true
+        , dryRun = false
 )
 
 public class CukesRunner {

@@ -16,13 +16,13 @@ Feature:  As a user or manager should be able to Create and Delete a Fiscal Posi
 		And user clicks on Configuration=>Accounting Link from left menu
 		Then user clicks on Fiscal Position Link grom left menu
 
-	@BRIT-4060 @emrah @todoo
+	@BRIT-4060 @emrah
 		Scenario Outline: Create a new Fiscal Position
 		Then user clicks on Create button
 		And user see Fiscal Position -"New" creation page
 		Then user fills out required information "<FiscalName>"
 		Then user clicks on save button
-		And user should see and verifies details that entered
+		And user should see and verifies details that entered "<FiscalName>"
 		
 		Examples: 
 		|FiscalName             |
@@ -36,7 +36,7 @@ Feature:  As a user or manager should be able to Create and Delete a Fiscal Posi
 		And user clicks Delete option
 		And user should see "Are you sure you want to delete this record ?" message
 		Then user clicks to Ok button
-		And user doesn't see deleted Fiscal Position on main page
+		And user doesn't see deleted Fiscal Position on main page "<FiscalName>"
 		
 		Examples: 
 		|FiscalName             |

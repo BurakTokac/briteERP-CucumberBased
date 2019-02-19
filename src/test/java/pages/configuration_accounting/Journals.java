@@ -1,7 +1,7 @@
 package pages.configuration_accounting;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
@@ -23,4 +23,18 @@ public class Journals {
     @FindBy(xpath = "//li[@class='active'][.='New']")
     public WebElement creationNewPageText;
 
+    @FindBy(xpath = "//input[@name='name'][@type='text']")
+    public WebElement newNameTag;
+
+    @FindBy(xpath = "//option[.='Sale']" )
+    public WebElement journalSaleType;
+
+    @FindBy(xpath = "//input[@name='code'][@type='text']")
+    public WebElement journalShortCode;
+
+    @FindBy(xpath = "//span[@name='name']")
+    public WebElement createdVariableName;
+
+    @FindBy(xpath = "//div[@class='modal-body']")
+    public WebElement confirmationMessage;
 }

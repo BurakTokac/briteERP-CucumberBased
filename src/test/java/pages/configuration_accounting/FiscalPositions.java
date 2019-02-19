@@ -13,6 +13,8 @@ public class FiscalPositions {
     @FindBy(xpath = "(//li[@class='active'])[3]")
     public WebElement pageName;
 
+    @FindBy(xpath = "//span[@class='oe_menu_text'][contains(text(),'Fiscal Positions')]")
+    public WebElement fiscalPosLink;
 
 
 

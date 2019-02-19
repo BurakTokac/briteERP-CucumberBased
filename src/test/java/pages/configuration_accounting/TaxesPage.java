@@ -19,6 +19,9 @@ public class TaxesPage {
     return Driver.getDriver().findElement(By.xpath("//td[@class='o_data_cell o_required_modifier'][contains(text(),'"+ ConfigurationReader.getProperty("fakedataname")+"')]"));
     }
 
+    @FindBy(xpath = "(//span[@class='oe_menu_text'][contains(text(),'Tax')])[2]")
+    public WebElement taxConfPage;
+
     @FindBy(xpath = "(//li[@class='active'])[3]")
     public WebElement pageName;
 

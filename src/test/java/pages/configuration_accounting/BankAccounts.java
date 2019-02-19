@@ -14,9 +14,10 @@ public class BankAccounts {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    public void getBankAccountPage(){
-        Driver.getDriver().get("http://52.39.162.23/web?#view_type=list&model=account.journal&menu_id=226&action=261");
-    }
+
+    @FindBy(xpath = "(//span[@class='oe_menu_text'][contains(text(),'Bank Accounts')])[3]")
+    public WebElement bankAccountLink;
+
     @FindBy(xpath = "//button[@accesskey='c']")
     public WebElement createBtn;
 
@@ -51,18 +52,20 @@ public class BankAccounts {
     @FindBy(xpath ="//a[contains(text(),'Delete')]" )
     public WebElement deleteBtn;
 
-    @FindBy(xpath = "//button[@class='btn btn-sm btn-primary']")
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-primary'][.='Ok']")
     public WebElement okButtonAfterDelete;
 
     @FindBy(xpath = "//table[@class='o_list_view table table-condensed table-striped o_list_view_ungrouped']//tr//td[3]")
     public List<WebElement> journalNames;
 
+    @FindBy(xpath = "//h4[contains(text(),'Odoo Server Error')]")
+    public WebElement odooServerErrorMsg;
 
-    public boolean isDisplayed(){
+    public boolean isDisplayed(String name){
         boolean check=false;
 
         for(WebElement list : journalNames){
-            if(list.getText().contains("citick")){
+            if(list.getText().contains(name)){
                 check=true;
             }
         }

@@ -19,10 +19,10 @@ Feature: As a user or manager should be able to Create and Delete a Tax
   @BRIT-4059 @emrah
   Scenario Outline: Create a new Tax
     Then user clicks on Create button
-    And user see 'Taxes -"New"' creation page
+    And user see Taxes -"New" creation page
     Then user fills out required information "<TaxName>", "<TaxAmount>"
     Then user clicks on save button
-    And user should see and verifies details that entered
+    And user should see and verifies details that entered "<TaxName>"
 
     Examples:
       | TaxName    | TaxAmount |
@@ -36,7 +36,7 @@ Feature: As a user or manager should be able to Create and Delete a Tax
     And user clicks Delete option
     And user should see "Are you sure you want to delete this record ?" message
     Then user clicks to Ok button
-    And user doesn't see deleted tax on main page
+    And user doesn't see deleted tax on main page "<TaxName>"
 
     Examples:
       | TaxName    |
