@@ -6,8 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="briteERP-CucumberBased" />
         <module name="com.briteerp-cucumber" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="briteERP-CucumberBased" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
