@@ -1,13 +1,13 @@
-package pages;
+package pages.puchasesMasterData;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class ErkinsPage {
+public class CreateMeetingPage {
 
-    public ErkinsPage(){
+    public CreateMeetingPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
