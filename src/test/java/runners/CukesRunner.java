@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
                 "junit:target/cucumber.xml"
         },
         tags = {
-               "@Regression"
+               "@andrew"
         },
         features = {"src/test/resources/features"},
         glue = {"step_definitions"}

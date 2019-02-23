@@ -26,5 +26,8 @@ public class VendorCreditNotes {
     @FindBy (xpath = "//div[@class='o_dialog_warning modal-body']")
     public WebElement canNotDeleteMessage;
 
+    @FindBy (xpath = "//button[@class='btn btn-sm btn-default o_button_import']")
+    public WebElement importButton;
+
 
 }

@@ -11,8 +11,7 @@ public class VendorBills {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (xpath = "//button[@class='btn btn-sm btn-default o_button_import']")
-    public WebElement importButton;
+
 
     @FindBy (xpath = "(//div[@class='o_checkbox'])[4]")
     public WebElement firstCheckbox;
@@ -22,4 +21,7 @@ public class VendorBills {
 
     @FindBy (xpath = "//a[@name='partner_id']")
     public WebElement receiptVendor;
+
+    @FindBy (xpath = "//title")
+    public WebElement title;
 }
